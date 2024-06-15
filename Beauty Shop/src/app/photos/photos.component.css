@@ -1,0 +1,78 @@
+.photos{
+  background-color: #E9ECEF;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: white;
+
+}
+
+.image-section{
+  position: relative;
+  overflow: hidden;
+  width: 80%;
+  margin-top: 20px;
+  background-color: white;
+}
+
+.image-section .photo-opecity{
+  background-color: #0D1326;
+  opacity: 0;
+  height: 200px !important;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.image-section .photo-noopecity{
+  visibility: hidden;
+  transition: 0.5s ease-in-out;
+
+}
+
+.image-section:hover .photo-opecity{
+  visibility: visible;
+  opacity: 0.5;
+  transition: 0.5s ease-in-out;
+}
+
+.image-section:hover .photo-noopecity{
+  visibility: visible;
+  transition: 0.5s ease-in-out;
+}
+
+.image-section img{
+  max-height: 75% !important;
+  max-width: 65%;
+  overflow-x: hidden;
+}
+
+.photo-noopecity h4{
+  position: absolute;
+  opacity: 1 !important;
+  bottom: 100px;
+  z-index: 2;
+  padding: 20px;
+  color: white;
+  font-size: 16px;
+}
+
+.photo-noopecity p{
+  position: absolute;
+  opacity: 1 !important;
+  z-index: 2;
+  bottom: 20px;
+  padding: 20px;
+  color: white;
+  font-size: 12px;
+}
+
+.image-section:hover img{
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+}

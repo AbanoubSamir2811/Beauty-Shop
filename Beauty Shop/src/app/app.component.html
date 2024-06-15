@@ -1,0 +1,25 @@
+<!-- <button class="btn btn-primary">sdfghkl,{{data.title}}</button>
+<input type="text" [value]="data.title" #inputRef (keyup)="dataTitle(inputRef.value)"> -->
+<div class="space"></div>
+<navBar></navBar>
+<div class="row content">
+  <slider *ngIf="slides" [slides]="slides" />
+  <div class="main">
+    @for (card of cards; track card.id; ){
+    <div class="col-md-3 col-12">
+
+      <card (viewCardEvent)="onCardClicked($event)" [card]="card" [index]="$index" />
+    </div>
+    }@empty{
+    <h1> No Cards</h1>
+    }
+    <!-- @for (card of cards; track card.id; let index = $index){
+    <div class="col-md-4 col-12">
+      <card (viewCardEvent)="onCardClicked($event)" [card]="card" [index]="index" />
+    </div>
+    }@empty{
+    <h1> No Cards</h1>
+    } -->
+  </div>
+  <aphotos />
+</div>
